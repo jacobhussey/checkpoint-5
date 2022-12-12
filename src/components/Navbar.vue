@@ -2,27 +2,18 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
-        <img alt="logo" src="../assets/img/cw-logo.png" height="45" />
+        <img alt="logo"
+          src="https://images.squarespace-cdn.com/content/v1/596d2760a803bb43a3beff36/1536519195613-LHFKZ09YG8DXNHF1SYQU/speechc.png?format=1000w"
+          height="45" />
       </div>
     </router-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarText"
-      aria-controls="navbarText"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
-        <li>
-          <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
-            About
-          </router-link>
-        </li>
+        <ProfileSearchResult />
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <Login />
@@ -32,11 +23,12 @@
 
 <script>
 import Login from './Login.vue'
+import ProfileSearchResult from './ProfileSearchResult.vue';
 export default {
   setup() {
     return {}
   },
-  components: { Login }
+  components: { Login, ProfileSearchResult }
 }
 </script>
 
@@ -60,5 +52,4 @@ a:hover {
     height: 64px;
   }
 }
-
 </style>
